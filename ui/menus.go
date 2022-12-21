@@ -115,16 +115,16 @@ func BuildOpenMenu(app *AppInit) *fyne.MenuItem {
 				return
 			}
 
-			image, _, err := image.Decode(uri)
+			loadedImage, _, err := image.Decode(uri)
 			if err != nil {
 				dialog.ShowError(err, app.PixlWindow)
 				return
 			}
 
-			app.PixlCanvas.LoadImage(image)
+			app.PixlCanvas.LoadImage(loadedImage)
 			app.State.SetFilePath(uri.URI().Path())
 
-			imgColors := util.GetImageColors(image)
+			imgColors := util.GetImageColors(loadedImage)
 			i := 0
 			for c := range imgColors {
 				if i == len(app.Swatches) {
