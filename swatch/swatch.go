@@ -21,7 +21,7 @@ func (swatch *Swatch) SetColor(c color.Color) {
 	swatch.Refresh()
 }
 
-func NewSwatch(state *apptype.State, color color.Color, swatchIndex int, clickHandler func(s *Swatch)) *Swatch {
+func NewSwatch(_ *apptype.State, color color.Color, swatchIndex int, clickHandler func(s *Swatch)) *Swatch {
 	swatch := &Swatch{
 		Selected:     false,
 		Color:        color,

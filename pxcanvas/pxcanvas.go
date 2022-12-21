@@ -86,7 +86,6 @@ func (pxCanvas *PxCanvas) TryPan(previousCoord *fyne.PointEvent, ev *desktop.Mou
 	}
 }
 
-// Brushable interface
 func (pxCanvas *PxCanvas) SetColor(c color.Color, x, y int) {
 	if nrgba, ok := pxCanvas.PixelData.(*image.NRGBA); ok {
 		nrgba.Set(x, y, c)

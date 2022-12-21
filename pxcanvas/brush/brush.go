@@ -15,7 +15,7 @@ const (
 func Cursor(
 	config apptype.PxCanvasConfig,
 	brush apptype.BrushType,
-	ev *desktop.MouseEvent,
+	_ *desktop.MouseEvent,
 	x int,
 	y int,
 ) []fyne.CanvasObject {
